@@ -1,5 +1,7 @@
 import getAndDisplay from "./displayContent.js";
+import { flipLeft, flipRight } from "./pageFlip.js";
 
-const CURRENT_SURAH = 0;
+getAndDisplay(1);
 
-getAndDisplay(23);
+document.querySelector("#flip-left").addEventListener("click", flipLeft);
+document.querySelector("#flip-right").addEventListener("click", flipRight);
