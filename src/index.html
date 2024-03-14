@@ -11,19 +11,22 @@
     class="flex items-center min-h-dvh flex-col gap-4 pb-8 overflow-y-scroll"
   >
     <header
-      class="flex flex-col items-center sticky top-0 bg-white w-full py-4"
+      class="flex flex-col items-center sticky top-0 bg-white w-full py-4 transition-all duration-1000"
     >
       <h1>THE HOLY QURAN</h1>
-      <span class="text-xs text-gray-600 cursor-pointer hover:underline"
-        >CONTENTS</span
+      <button
+        id="contents"
+        class="text-xs text-gray-600 cursor-pointer hover:underline"
       >
+        CONTENTS
+      </button>
     </header>
     <div
-      class="max-w-[550px] min-h-[725px] px-6 pb-8 flex flex-col page md:w-full"
+      class="md:max-w-[550px] min-h-[725px] px-6 pb-8 flex flex-col page md:w-full md:min-h-[550px] w-[550px]"
     >
       <div class="flex mb-6 mt-8">
         <div
-          class="row-span-2 text-7xl flex items-center justify-center -mt-4 mr-2"
+          class="text-7xl flex items-center justify-center -mt-4 mr-2"
           id="surah"
         ></div>
         <div class="flex flex-col">
@@ -31,9 +34,9 @@
           <div class="text-sm text-gray-600" id="english-title"></div>
         </div>
       </div>
-      <div class="flex-grow mx-4" id="ayahs-container"></div>
+      <div class="flex-grow mx-4" id="container"></div>
     </div>
-    <div class="sticky bottom-4 flex gap-2">
+    <div class="sticky bottom-4 flex gap-2 md:fixed">
       <button class="button" id="flip-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"

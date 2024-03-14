@@ -8,11 +8,11 @@ function displayContent(dataObject) {
   document.querySelector("#english-title").textContent =
     dataObject.data.englishNameTranslation;
   // Show ayahs
-  document.querySelector("#ayahs-container").innerHTML = "";
+  document.querySelector("#container").innerHTML = "";
   dataObject.data.ayahs.forEach((ayah) => {
     const ayahElement = document.createElement("p");
     ayahElement.textContent = `${ayah.numberInSurah}. ${ayah.text}`;
-    document.querySelector("#ayahs-container").appendChild(ayahElement);
+    document.querySelector("#container").appendChild(ayahElement);
   });
 }
 
