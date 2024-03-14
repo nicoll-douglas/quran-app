@@ -1,13 +1,14 @@
-import getAndDisplay from "./displayContent.js";
 import { flipLeft, flipRight } from "./pageFlip.js";
 import scrollEffect from "./headerScrollEffect.js";
+import getAndShowContents from "./showContents.js";
 
-// getAndDisplay(1);
-fetch("http://api.alquran.cloud/v1/meta")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+getAndShowContents();
 
 document.querySelector("#flip-left").addEventListener("click", flipLeft);
 document.querySelector("#flip-right").addEventListener("click", flipRight);
+
+document
+  .querySelector("#contents")
+  .addEventListener("click", getAndShowContents);
 
 window.addEventListener("scroll", scrollEffect);
