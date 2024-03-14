@@ -6,16 +6,14 @@ function showContents(dataObject) {
     top: 0,
     behavior: "smooth",
   });
-
+  // clear page content if any
   document.querySelector("#surah").textContent = "";
   document.querySelector("#arabic-title").textContent = "";
   document.querySelector("#english-title").textContent = "";
-
   const container = document.querySelector("#container");
   container.innerHTML = "";
 
   const label = document.createElement("div");
-
   label.textContent = "CONTENTS";
   label.classList.add("mb-2");
 
@@ -32,11 +30,11 @@ function showContents(dataObject) {
   array.forEach((element) => {
     const span = document.createElement("span");
     span.classList.add("text-sm", "cursor-pointer", "hover:underline");
-    span.id = element.number;
     span.addEventListener("click", () => {
       getAndDisplaySurah(element.number);
     });
     span.textContent = `${element.number}. ${element.englishName} - ${element.englishNameTranslation}`;
+    // 57 items for first list of contents, 57 items for second list
     if (list1.childNodes.length < 57) {
       list1.appendChild(span);
     } else {
