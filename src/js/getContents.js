@@ -1,21 +1,16 @@
-import data from "./data.js";
+import utilities from "./utilities.js";
 import showSpinner from "./spinner.js";
 import contentsPage from "./contentsPage.js";
 
 function showContents(dataObject) {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-  document.querySelector("#page").innerHTML = "";
-
+  utilities.resetPage();
   const fragment = contentsPage(dataObject);
   document.querySelector("#page").append(fragment);
-  data.currentSurah = 0;
+  utilities.currentSurah = 0;
 }
 
 export default async function getContents() {
-  if (data.currentSurah !== 0) {
+  if (utilities.currentSurah !== 0) {
     showSpinner();
     try {
       const response = await fetch("http://api.alquran.cloud/v1/meta");
