@@ -48,3 +48,7 @@
 .content-list-item {
   @apply text-sm cursor-pointer hover:underline;
 }
+
+.loader {
+  @apply w-8 h-8 border-4 border-gray-300 border-t-gray-600 rounded-full self-center mt-12 animate-spin;
+}
