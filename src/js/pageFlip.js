@@ -1,29 +1,29 @@
-import getAndDisplaySurah from "./displaySurah.js";
+import getSurah from "./getSurah.js";
 import data from "./data.js";
-import getAndShowContents from "./showContents.js";
+import getContents from "./getContents.js";
 
 function flipLeft() {
   if (data.currentSurah === 0) {
-    getAndDisplaySurah(114);
+    getSurah(114);
     data.currentSurah = 114;
   } else if (data.currentSurah === 1) {
-    getAndShowContents();
+    getContents();
     data.currentSurah = 0;
   } else {
-    getAndDisplaySurah(data.currentSurah - 1);
+    getSurah(data.currentSurah - 1);
     data.currentSurah -= 1;
   }
 }
 
 function flipRight() {
   if (data.currentSurah === 0) {
-    getAndDisplaySurah(1);
+    getSurah(1);
     data.currentSurah = 1;
   } else if (data.currentSurah === 114) {
-    getAndShowContents();
+    getContents();
     data.currentSurah = 0;
   } else {
-    getAndDisplaySurah(data.currentSurah + 1);
+    getSurah(data.currentSurah + 1);
     data.currentSurah += 1;
   }
 }

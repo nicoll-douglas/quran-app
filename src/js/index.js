@@ -1,14 +1,12 @@
 import { flipLeft, flipRight } from "./pageFlip.js";
-import scrollEffect from "./headerScrollEffect.js";
-import getAndShowContents from "./showContents.js";
+import headerScrollEffect from "./headerScrollEffect.js";
+import getContents from "./getContents.js";
 
-getAndShowContents();
+// getContents();
 
 document.querySelector("#flip-left").addEventListener("click", flipLeft);
 document.querySelector("#flip-right").addEventListener("click", flipRight);
 
-document
-  .querySelector("#contents")
-  .addEventListener("click", getAndShowContents);
+document.querySelector("#contents").addEventListener("click", getContents);
 
-window.addEventListener("scroll", scrollEffect);
+window.addEventListener("scroll", headerScrollEffect);

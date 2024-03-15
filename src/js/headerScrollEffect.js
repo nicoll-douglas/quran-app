@@ -1,6 +1,6 @@
 const header = document.querySelector("header");
 
-export default function scrollEffect() {
+export default function headerScrollEffect() {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     header.classList.add("shadow-lg");
   } else {
